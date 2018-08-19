@@ -1,65 +1,43 @@
 <template>
-  <section class="container">
-    <div>
-      <app-logo/>
-      <h1 class="title">
-        rapport_stage
-      </h1>
-      <h2 class="subtitle">
-        Rapport de stage Licence Pro WebDesign
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
-    </div>
-  </section>
+<main-layout>
+  <div slot="content">
+    C'est la page de garde !!!
+
+    <p>Nom prenom</p>
+    <p>année scolaire</p>
+    <p>Licence Webdesign + Logo </p>
+    <p>Problématique</p>
+    <p>logo univ limoges</p>
+    <p>logo fac des lettres </p>
+
+
+    <nuxt-link to="sommaire">
+      Sommaire
+    </nuxt-link>
+  </div>
+</main-layout>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import MainLayout from "~/components/MainLayout.vue";
 
 export default {
   components: {
-    AppLogo
+    MainLayout
   }
-}
+};
 </script>
 
 <style>
-.container {
+.pos-r {
+  position: relative;
+}
+.minh-100 {
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.menu--position {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
 }
 </style>
-
