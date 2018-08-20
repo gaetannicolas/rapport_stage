@@ -17,7 +17,7 @@
       </button>
       <div class="side-bar__wrapper-title">
         <h1 class="side-bar__title">
-          Titre
+          {{title}}
         </h1>
       </div>
     </div>
@@ -47,6 +47,12 @@
 
 <script>
 export default {
+  props: {
+    title: {
+      type: String,
+      required: true
+    }
+  },
   data() {
     return {
       menuActive: false
@@ -131,12 +137,16 @@ export default {
 }
 
 .side-bar__wrapper-title {
-  transform: rotate(-90deg);
+  transform: rotate(180deg);
   margin-top: 80px;
+  display: flex;
+  justify-content: center;
 }
 
 .side-bar__title {
   font-family: "Dosis", sans-serif;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
 }
 
 .btn-menu-desktop {

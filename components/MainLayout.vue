@@ -1,6 +1,6 @@
 <template>
   <div class="pos-r minh-100">
-    <app-menu></app-menu>
+    <app-menu :title="title"></app-menu>
     <div class="content__container">
       <slot name="content"></slot>
     </div>
@@ -11,6 +11,12 @@
 import AppMenu from "~/components/AppMenu.vue";
 
 export default {
+  props: {
+    title: {
+      type: String,
+      required: true
+    }
+  },
   components: {
     AppMenu
   }

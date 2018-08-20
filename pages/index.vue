@@ -1,5 +1,4 @@
 <template>
-<main-layout>
   <div slot="content">
     C'est la page de garde !!!
 
@@ -113,17 +112,10 @@ v
 
 
   </div>
-</main-layout>
 </template>
 
 <script>
-import MainLayout from "~/components/MainLayout.vue";
-
-export default {
-  components: {
-    MainLayout
-  }
-};
+export default {};
 </script>
 
 <style>

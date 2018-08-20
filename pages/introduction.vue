@@ -1,5 +1,5 @@
 <template>
-<main-layout>
+<main-layout title="Introduction: Ma place dans le projet">
   <div slot="content">
     c'est l'intro boy
     262E50
