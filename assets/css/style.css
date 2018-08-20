@@ -3,3 +3,49 @@
 
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900");
 /* font-family: 'Raleway', sans-serif; */
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-size: calc(1em * 0.625);
+  font-family: "omnesmedium";
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1rem 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

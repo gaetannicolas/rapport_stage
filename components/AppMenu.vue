@@ -22,23 +22,59 @@
       </div>
     </div>
     <div class="menu" :class="menuActive ? 'active' : ''">
-      <nuxt-link class="menu__link" to="sommaire">
+      <nuxt-link class="menu__link menu__link--main" to="sommaire">
         Sommaire
       </nuxt-link>
-      <nuxt-link class="menu__link" to="introduction">
-        introduction
+      <nuxt-link class="menu__link menu__link--main" to="introduction">
+        Introduction
       </nuxt-link>
-      <nuxt-link class="menu__link" to="contexte">
-        Partie 1 : Le contexte
+      <nuxt-link class="menu__link menu__link--main" to="contexte">
+        1- Le contexte
       </nuxt-link>
-      <nuxt-link class="menu__link" to="projet">
-        Partie 2 : Le projet
+      <nuxt-link class="menu__link menu__link--secondary" to="xprime">
+        X-Prime
       </nuxt-link>
-      <nuxt-link class="menu__link" to="place">
-        Partie 3 : Ma place
+      <nuxt-link class="menu__link menu__link--secondary" to="appstud">
+        Appstud
       </nuxt-link>
-      <nuxt-link class="menu__link" to="bilan">
+      <nuxt-link class="menu__link menu__link--main" to="projet">
+        2- Un projet de grande envergure
+      </nuxt-link>
+      <nuxt-link class="menu__link menu__link--secondary" to="globale">
+        Présentation globale
+      </nuxt-link>
+      <nuxt-link class="menu__link menu__link--secondary" to="contraintes">
+        Les contraintes techniques et humaines
+      </nuxt-link>
+      <nuxt-link class="menu__link menu__link--secondary" to="web">
+        Organisation coté web
+      </nuxt-link>
+      <nuxt-link class="menu__link menu__link--main" to="place">
+        3- Ma place dans le projet
+      </nuxt-link>
+      <nuxt-link class="menu__link menu__link--secondary" to="missions">
+        Mes missions
+      </nuxt-link>
+      <nuxt-link class="menu__link menu__link--secondary" to="difficultes">
+        Les difficultés rencontrées
+      </nuxt-link>
+      <nuxt-link class="menu__link menu__link--secondary" to="adaptation">
+        L'adaptation au projet
+      </nuxt-link>
+      <nuxt-link class="menu__link menu__link--main" to="bilan">
         Mon bilan
+      </nuxt-link>
+      <nuxt-link class="menu__link menu__link--secondary" to="apporter">
+        Ce que j'ai essayé d'apporter
+      </nuxt-link>
+      <nuxt-link class="menu__link menu__link--secondary" to="formation">
+        Les apports de la formation
+      </nuxt-link>
+      <nuxt-link class="menu__link menu__link--secondary" to="evolution">
+        Mon évolution personnelle et professionnel
+      </nuxt-link>
+      <nuxt-link class="menu__link menu__link--main" to="remerciements">
+        Remerciements
       </nuxt-link>
 
     </div>
@@ -138,7 +174,7 @@ export default {
 
 .side-bar__wrapper-title {
   transform: rotate(180deg);
-  margin-top: 80px;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
 }
@@ -147,6 +183,8 @@ export default {
   font-family: "Dosis", sans-serif;
   writing-mode: vertical-rl;
   text-orientation: mixed;
+  font-size: 1.6rem;
+  font-weight: 300;
 }
 
 .btn-menu-desktop {
@@ -216,12 +254,27 @@ export default {
   background-color: #262e50;
   transform: translateX(-100%);
   transition: 0.5s ease;
+  text-align: center;
+  padding-top: 10px;
 }
 
 .menu__link {
   text-decoration: none;
   color: #eee;
   display: block;
+  font-family: "Dosis", sans-serif;
+}
+
+.menu__link--main {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.menu__link--secondary {
+  font-size: 1.1rem;
+  font-weight: 300;
 }
 
 .menu.active {
@@ -238,8 +291,8 @@ export default {
   }
 
   .menu {
-    width: calc(50% - 80px);
-    min-width: calc(50% - 80px);
+    width: 50%;
+    min-width: 50%;
   }
   .menu.active {
     left: 80px;

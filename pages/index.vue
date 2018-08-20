@@ -1,5 +1,5 @@
 <template>
-  <div slot="content">
+  <div>
     C'est la page de garde !!!
 
     <p>Nom prenom</p>
