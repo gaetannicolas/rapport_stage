@@ -1,11 +1,27 @@
 <template>
-  <button @click="menuActive = !menuActive" class="menu" :class="menuActive ? 'active' : ''">
-    <span class="menu__block">
-      <span class="menu__line"></span>
-      <span class="menu__line"></span>
-      <span class="menu__line"></span>
-    </span>
-  </button>
+  <div>
+    <button @click="menuActive = !menuActive" class="btn-menu-mobile" :class="menuActive ? 'active' : ''">
+      <span class="btn-menu-mobile__block">
+        <span class="btn-menu-mobile__line"></span>
+        <span class="btn-menu-mobile__line"></span>
+        <span class="btn-menu-mobile__line"></span>
+      </span>
+    </button>
+    <div class="side-bar">
+      <button @click="menuActive = !menuActive" class="btn-menu-desktop" :class="menuActive ? 'active' : ''">
+        <span class="btn-menu-desktop__block">
+          <span class="btn-menu-desktop__line"></span>
+          <span class="btn-menu-desktop__line"></span>
+          <span class="btn-menu-desktop__line"></span>
+        </span>
+      </button>
+      <div class="side-bar__wrapper-title">
+        <h1 class="side-bar__title">
+          Titre
+        </h1>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -19,21 +35,24 @@ export default {
 </script>
 
 <style>
-.menu {
+.btn-menu-mobile {
   width: 50px;
   height: 50px;
   background-color: #262e50;
   border-radius: 50%;
   border: 0;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
 }
 
-.menu__block {
+.btn-menu-mobile__block {
   display: inline-block;
   vertical-align: middle;
   margin: 0 auto;
 }
 
-.menu__line {
+.btn-menu-mobile__line {
   display: block;
   height: 5px;
   width: 5px;
@@ -43,11 +62,11 @@ export default {
   transition: all 0.5s ease;
 }
 
-.menu.active .menu__block {
+.btn-menu-mobile.active .btn-menu-mobile__block {
   width: 23px;
 }
 
-.menu.active .menu__line:first-child {
+.btn-menu-mobile.active .btn-menu-mobile__line:first-child {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   -webkit-transform-origin: left;
@@ -56,11 +75,11 @@ export default {
   border-radius: 15px;
 }
 
-.menu.active .menu__line:nth-child(2) {
+.btn-menu-mobile.active .btn-menu-mobile__line:nth-child(2) {
   opacity: 0;
 }
 
-.menu.active .menu__line:last-child {
+.btn-menu-mobile.active .btn-menu-mobile__line:last-child {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-transform-origin: left;
@@ -69,11 +88,94 @@ export default {
   border-radius: 15px;
 }
 
-.menu__line:last-child {
+.btn-menu-mobile__line:last-child {
   margin-bottom: 0;
 }
 
-.menu:focus {
+.btn-menu-mobile:focus {
   outline: 0;
+}
+
+.side-bar {
+  position: fixed;
+  height: 100vh;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  width: 80px;
+  max-width: 80px;
+  background-color: #eee;
+}
+
+.side-bar__wrapper-title {
+  transform: rotate(-90deg);
+  margin-top: 80px;
+}
+
+.side-bar__title {
+  font-family: "Dosis", sans-serif;
+}
+
+.btn-menu-desktop {
+  width: 80px;
+  height: 80px;
+  background-color: #262e50;
+  border: 0;
+}
+
+.btn-menu-desktop__block {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+
+.btn-menu-desktop__line {
+  display: block;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: #eee;
+  margin-bottom: 6px;
+  transition: all 0.5s ease;
+}
+
+.btn-menu-desktop.active .btn-menu-desktop__block {
+  width: 23px;
+}
+
+.btn-menu-desktop.active .btn-menu-desktop__line:first-child {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: left;
+  transform-origin: left;
+  width: 30px;
+  border-radius: 15px;
+}
+
+.btn-menu-desktop.active .btn-menu-desktop__line:nth-child(2) {
+  opacity: 0;
+}
+
+.btn-menu-desktop.active .btn-menu-desktop__line:last-child {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: left;
+  transform-origin: left;
+  width: 30px;
+  border-radius: 15px;
+}
+
+.btn-menu-desktop__line:last-child {
+  margin-bottom: 0;
+}
+
+.btn-menu-desktop:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .btn-menu-mobile {
+    display: none;
+  }
 }
 </style>

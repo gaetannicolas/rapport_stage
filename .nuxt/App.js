@@ -11,7 +11,7 @@ let layouts = {
 let resolvedLayouts = {}
 
 export default {
-  head: {"title":"rapport_stage","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Rapport de stage Licence Pro WebDesign"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
+  head: {"title":"rapport_stage","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Rapport de stage Licence Pro WebDesign"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"css":["~\u002Fassets\u002Fcss\u002Fstyle.css"],"style":[],"script":[]},
   render(h, props) {
     const loadingEl = h('nuxt-loading', { ref: 'loading' })
     const layoutEl = h(this.layout || 'nuxt')

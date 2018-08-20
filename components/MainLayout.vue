@@ -1,7 +1,9 @@
 <template>
   <div class="pos-r minh-100">
-    <app-menu class="menu--position"></app-menu>
-    <slot name="content"></slot>
+    <app-menu></app-menu>
+    <div class="content__container">
+      <slot name="content"></slot>
+    </div>
   </div>
 </template>
 
@@ -24,9 +26,7 @@ export default {
   min-height: 100vh;
 }
 
-.menu--position {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
+.content__container {
+  margin-left: 80px;
 }
 </style>
