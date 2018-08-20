@@ -27,6 +27,12 @@ export default {
 }
 
 .content__container {
-  margin-left: 80px;
+  margin-left: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .content__container {
+    margin-left: 80px;
+  }
 }
 </style>

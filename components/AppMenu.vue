@@ -21,6 +21,27 @@
         </h1>
       </div>
     </div>
+    <div class="menu" :class="menuActive ? 'active' : ''">
+      <nuxt-link class="menu__link" to="sommaire">
+        Sommaire
+      </nuxt-link>
+      <nuxt-link class="menu__link" to="introduction">
+        introduction
+      </nuxt-link>
+      <nuxt-link class="menu__link" to="contexte">
+        Partie 1 : Le contexte
+      </nuxt-link>
+      <nuxt-link class="menu__link" to="projet">
+        Partie 2 : Le projet
+      </nuxt-link>
+      <nuxt-link class="menu__link" to="place">
+        Partie 3 : Ma place
+      </nuxt-link>
+      <nuxt-link class="menu__link" to="bilan">
+        Mon bilan
+      </nuxt-link>
+
+    </div>
   </div>
 </template>
 
@@ -41,9 +62,10 @@ export default {
   background-color: #262e50;
   border-radius: 50%;
   border: 0;
-  position: absolute;
+  position: fixed;
   bottom: 30px;
   right: 30px;
+  z-index: 9999;
 }
 
 .btn-menu-mobile__block {
@@ -71,7 +93,7 @@ export default {
   transform: rotate(45deg);
   -webkit-transform-origin: left;
   transform-origin: left;
-  width: 30px;
+  width: 31px;
   border-radius: 15px;
 }
 
@@ -84,7 +106,7 @@ export default {
   transform: rotate(-45deg);
   -webkit-transform-origin: left;
   transform-origin: left;
-  width: 30px;
+  width: 31px;
   border-radius: 15px;
 }
 
@@ -97,6 +119,7 @@ export default {
 }
 
 .side-bar {
+  display: none;
   position: fixed;
   height: 100vh;
   min-height: 100vh;
@@ -173,9 +196,43 @@ export default {
   outline: none;
 }
 
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 100%;
+  min-height: 100vh;
+  background-color: #262e50;
+  transform: translateX(-100%);
+  transition: 0.5s ease;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: #eee;
+  display: block;
+}
+
+.menu.active {
+  transform: translateX(0%);
+}
+
 @media screen and (min-width: 768px) {
   .btn-menu-mobile {
     display: none;
+  }
+
+  .side-bar {
+    display: block;
+  }
+
+  .menu {
+    width: calc(50% - 80px);
+    min-width: calc(50% - 80px);
+  }
+  .menu.active {
+    left: 80px;
   }
 }
 </style>

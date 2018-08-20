@@ -13,9 +13,9 @@ module.exports = {
         content: "Rapport de stage Licence Pro WebDesign"
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
-    css: ["~/assets/css/style.css"]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
+  css: ["~/assets/css/style.css", "~/assets/css/normalize.css"],
   /*
   ** Customize the progress bar color
   */
