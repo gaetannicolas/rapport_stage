@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button @click="menuActive = !menuActive" class="btn-menu-mobile" :class="menuActive ? 'active' : ''">
+    <button @click="toggleMenu" class="btn-menu-mobile" :class="menuActive ? 'active' : ''">
       <span class="btn-menu-mobile__block">
         <span class="btn-menu-mobile__line"></span>
         <span class="btn-menu-mobile__line"></span>
@@ -8,7 +8,7 @@
       </span>
     </button>
     <div class="side-bar">
-      <button @click="menuActive = !menuActive" class="btn-menu-desktop" :class="menuActive ? 'active' : ''">
+      <button @click="toggleMenu" class="btn-menu-desktop" :class="menuActive ? 'active' : ''">
         <span class="btn-menu-desktop__block">
           <span class="btn-menu-desktop__line"></span>
           <span class="btn-menu-desktop__line"></span>
@@ -76,8 +76,15 @@
       <nuxt-link class="menu__link menu__link--main" to="remerciements">
         Remerciements
       </nuxt-link>
+      <nuxt-link class="menu__link menu__link--main" to="lexique">
+        Lexique
+      </nuxt-link>
+      <nuxt-link class="menu__link menu__link--main" to="annexes">
+        Annexes
+      </nuxt-link>
 
     </div>
+    <button @click="toggleMenu" class="menu__button-bg" :class="menuActive ? 'active' : ''"></button>
   </div>
 </template>
 
@@ -93,11 +100,24 @@ export default {
     return {
       menuActive: false
     };
+  },
+  methods: {
+    toggleMenu() {
+      this.menuActive = !this.menuActive;
+      if (this.menuActive) {
+        window.document.body.classList.add("has-open");
+      } else {
+        window.document.body.classList.remove("has-open");
+      }
+    }
   }
 };
 </script>
 
 <style>
+body.has-open {
+  overflow: hidden;
+}
 .btn-menu-mobile {
   width: 50px;
   height: 50px;
@@ -250,12 +270,16 @@ export default {
   left: 0;
   width: 100%;
   min-width: 100%;
+  height: 100vh;
   min-height: 100vh;
+  overflow-y: scroll;
   background-color: #262e50;
   transform: translateX(-100%);
   transition: 0.5s ease;
   text-align: center;
   padding-top: 10px;
+  padding-bottom: 40px;
+  z-index: 999;
 }
 
 .menu__link {
@@ -281,6 +305,27 @@ export default {
   transform: translateX(0%);
 }
 
+.menu__button-bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100% - 80px);
+  min-width: calc(100% - 80px);
+  min-height: 100vh;
+  transform: translateX(100%);
+  background-color: transparent;
+  border: 0;
+  z-index: 99;
+}
+.menu__button-bg.active {
+  transform: translateX(0);
+}
+
+.menu__button-bg:focus {
+  outline: none;
+}
+
 @media screen and (min-width: 768px) {
   .btn-menu-mobile {
     display: none;
@@ -296,6 +341,9 @@ export default {
   }
   .menu.active {
     left: 80px;
+  }
+  .menu__button-bg {
+    display: block;
   }
 }
 </style>
