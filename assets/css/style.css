@@ -4,6 +4,8 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900");
 /* font-family: 'Raleway', sans-serif; */
 
+@import "~/assets/css/normalize.css";
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -48,4 +50,30 @@ h6 {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 25px 0px;
+}
+
+.content__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.content__text {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  margin: 40px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    padding: 50px 0 0;
+  }
 }

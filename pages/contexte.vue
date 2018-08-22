@@ -1,5 +1,5 @@
 <template>
-<main-layout>
+<main-layout title="Introduction" prev="sommaire" next="contexte">
   <div slot="content">
     c'est l'intro boy
     262E50
