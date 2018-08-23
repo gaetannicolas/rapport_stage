@@ -56,20 +56,37 @@ img {
   max-width: 800px;
   margin: 0 auto;
   padding: 50px 25px 0px;
+  min-height: 70vh;
 }
 
-.content__title {
+.content__main-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.content__second-title {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 25px;
   margin-top: 0;
   margin-bottom: 30px;
+  margin-left: 20px;
 }
 
 .content__text {
   font-family: "Raleway", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   margin: 40px 0;
+  line-height: 1.5;
+}
+
+.glossaire {
+  color: rgba(38, 46, 80, 0.8);
+  font-weight: 700;
 }
 
 @media screen and (min-width: 768px) {

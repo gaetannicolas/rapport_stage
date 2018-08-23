@@ -28,7 +28,7 @@
       <nuxt-link class="menu__link menu__link--main" to="introduction">
         Introduction
       </nuxt-link>
-      <nuxt-link class="menu__link menu__link--main" to="contexte">
+      <nuxt-link class="menu__link menu__link--main" to="xprime">
         1- Le contexte
       </nuxt-link>
       <nuxt-link class="menu__link menu__link--secondary" to="xprime">

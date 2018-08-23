@@ -40,12 +40,13 @@ export default {
   text-decoration: none;
   position: relative;
   font-size: 16px;
+  padding: 10px 0;
 }
 
 .pagination__link:after {
   content: "";
   position: absolute;
-  bottom: -6px;
+  bottom: 2px;
   left: 0;
   width: 100%;
   height: 2px;
