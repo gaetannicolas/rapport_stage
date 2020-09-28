@@ -1,6 +1,20 @@
-# rapport_stage
+rapport-stage
 
-> Rapport de stage Licence Pro WebDesign
+# Rapport de stage Licence Pro WebDesign
+
+## Contexte
+
+Rendu de rapport de stage pour la licence professionnel Webdesign Sensoriel de Limoges.
+Stage effectué chez XPrime Group (maintenant Mirum South Europe) et chez Appstud.
+
+Internship report for the Limoges professional licence Webdesign Sensoriel.
+Internship at XPrime Group (now Mirum South Europe) and Appstud.
+
+## Stack technique
+
+Rapport généré en static avec NuxtJs
+
+Report generated in static with NuxtJs
 
 ## Build Setup
 
